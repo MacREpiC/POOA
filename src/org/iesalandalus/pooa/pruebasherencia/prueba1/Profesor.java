@@ -7,11 +7,9 @@ public class Profesor extends Persona{
     private double salario;
 
     public Profesor(String nombre, String apellidos, String especialidad, double salario, LocalDate fechaNac){
+        super(nombre, apellidos, fechaNac);
         setEspecialidad(especialidad);
         setSalario(salario);
-        setNombre(nombre);
-        setApellidos(apellidos);
-        setFechaNac(fechaNac);
     }
 
     public String getEspecialidad() {
@@ -23,8 +21,12 @@ public class Profesor extends Persona{
     }
 
     @Override
-    public String getNombre(){
-        return String.format("Profesor -> %s", super.getNombre());
+    public String saludar(){
+        StringBuilder resultado= new StringBuilder ();
+        resultado.append("Hola, mi nombre es profesor ").append(this.getNombre()).append(" ");
+        resultado.append(this.getApellidos()).append(" y soy de la especialidad de ").append(this.especialidad);
+
+        return resultado.toString();
     }
 
     private void setEspecialidad(String especialidad) {

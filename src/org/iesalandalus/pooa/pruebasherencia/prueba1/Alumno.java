@@ -7,20 +7,13 @@ public class Alumno extends Persona {
     private double notaMedia;
 
     public Alumno(String nombre, String apellidos, String grupo, double notaMedia, LocalDate fechaNac){
+        super(nombre, apellidos, fechaNac);
         setGrupo(grupo);
         setNotaMedia(notaMedia);
-        setApellidos(apellidos);
-        setNombre(nombre);
-        setFechaNac(fechaNac);
     }
 
     public String getGrupo() {
         return grupo;
-    }
-
-    @Override
-    public String getNombre(){
-        return String.format("Alumno -> %s", super.getNombre());
     }
 
     public double getNotaMedia(){
@@ -33,6 +26,15 @@ public class Alumno extends Persona {
 
     private void setNotaMedia(double notaMedia){
         this.notaMedia = notaMedia;
+    }
+
+    @Override
+    public String saludar(){
+        StringBuilder resultado= new StringBuilder ();
+        resultado.append("Hola, soy el alumno ").append(this.getNombre()).append(" ");
+        resultado.append(this.getApellidos()).append(" y estoy en el grupo ").append(this.grupo);
+
+        return resultado.toString();
     }
 
     @Override

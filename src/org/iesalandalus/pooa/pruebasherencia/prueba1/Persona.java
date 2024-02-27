@@ -2,7 +2,7 @@ package org.iesalandalus.pooa.pruebasherencia.prueba1;
 
 import java.time.LocalDate;
 
-public class Persona {
+public abstract class Persona {
     private String nombre;
     private String apellidos;
     private LocalDate fechaNac;
@@ -13,9 +13,6 @@ public class Persona {
         setFechaNac(fechaNac);
     }
 
-    public Persona() {
-    }
-
     public String getNombre(){
         return nombre;
     }
@@ -24,17 +21,23 @@ public class Persona {
         return apellidos;
     }
 
-    protected void setNombre(String nombre) {
+    public LocalDate getFechaNac() {
+        return fechaNac;
+    }
+
+    private void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    protected void setApellidos(String apellidos){
+    private void setApellidos(String apellidos){
         this.apellidos = apellidos;
     }
 
-    protected void setFechaNac(LocalDate fechaNac){
+    private void setFechaNac(LocalDate fechaNac){
         this.fechaNac = fechaNac;
     }
+
+    public abstract String saludar();
 
     @Override
     public String toString() {
