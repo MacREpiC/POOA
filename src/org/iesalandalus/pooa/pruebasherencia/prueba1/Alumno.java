@@ -1,20 +1,26 @@
-package org.iesalandalus.pooa.pruebas.prueba1;
+package org.iesalandalus.pooa.pruebasherencia.prueba1;
 
-import javax.print.DocFlavor;
+import java.time.LocalDate;
 
 public class Alumno extends Persona {
     private String grupo;
     private double notaMedia;
 
-    public Alumno(String nombre, String apellidos, String grupo, double notaMedia){
+    public Alumno(String nombre, String apellidos, String grupo, double notaMedia, LocalDate fechaNac){
         setGrupo(grupo);
         setNotaMedia(notaMedia);
-        setNombre(nombre);
         setApellidos(apellidos);
+        setNombre(nombre);
+        setFechaNac(fechaNac);
     }
 
     public String getGrupo() {
         return grupo;
+    }
+
+    @Override
+    public String getNombre(){
+        return String.format("Alumno -> %s", super.getNombre());
     }
 
     public double getNotaMedia(){

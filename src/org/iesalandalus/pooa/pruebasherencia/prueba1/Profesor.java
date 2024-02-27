@@ -1,21 +1,30 @@
-package org.iesalandalus.pooa.pruebas.prueba1;
+package org.iesalandalus.pooa.pruebasherencia.prueba1;
+
+import java.time.LocalDate;
 
 public class Profesor extends Persona{
-    protected String especialidad;
-    protected double salario;
+    private String especialidad;
+    private double salario;
 
-    public Profesor(String nombre, String apellidos, String especialidad, double salario){
+    public Profesor(String nombre, String apellidos, String especialidad, double salario, LocalDate fechaNac){
         setEspecialidad(especialidad);
         setSalario(salario);
         setNombre(nombre);
         setApellidos(apellidos);
+        setFechaNac(fechaNac);
     }
+
     public String getEspecialidad() {
         return especialidad;
     }
 
     public double getSalario() {
         return salario;
+    }
+
+    @Override
+    public String getNombre(){
+        return String.format("Profesor -> %s", super.getNombre());
     }
 
     private void setEspecialidad(String especialidad) {

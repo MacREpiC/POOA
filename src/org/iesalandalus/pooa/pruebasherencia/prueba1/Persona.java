@@ -1,14 +1,16 @@
-package org.iesalandalus.pooa.pruebas.prueba1;
+package org.iesalandalus.pooa.pruebasherencia.prueba1;
 
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 
 public class Persona {
-    protected String nombre;
-    protected String apellidos;
+    private String nombre;
+    private String apellidos;
+    private LocalDate fechaNac;
 
-    public Persona(String nombre, String apellidos){
+    public Persona(String nombre, String apellidos, LocalDate fechaNac){
         setApellidos(apellidos);
         setNombre(nombre);
+        setFechaNac(fechaNac);
     }
 
     public Persona() {
@@ -22,17 +24,21 @@ public class Persona {
         return apellidos;
     }
 
-    void setNombre(String nombre) {
+    protected void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    void setApellidos(String apellidos){
+    protected void setApellidos(String apellidos){
         this.apellidos = apellidos;
+    }
+
+    protected void setFechaNac(LocalDate fechaNac){
+        this.fechaNac = fechaNac;
     }
 
     @Override
     public String toString() {
-        StringBuilder resultado=new StringBuilder();
+        StringBuilder resultado = new StringBuilder();
 
         resultado.append("Nombre: ").append (this.nombre).append("\n");
         resultado.append("Apellidos: ").append (this.apellidos).append("\n");

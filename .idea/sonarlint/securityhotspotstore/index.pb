@@ -7,3 +7,15 @@ g
 7src/org/iesalandalus/pooa/pruebas/prueba1/Profesor.java,c\8\c83c21708a44f3ce5f36b3a1f951ad2806ce2847
 c
 3src/org/iesalandalus/pooa/pruebas/prueba1/Main.java,d\9\d99e2505a37a831ad792b2a1c3380a24d6b80d34
+o
+?src/org/iesalandalus/pooa/pruebasherencia/prueba1/Profesor.java,2\d\2de30906a1fcc2b689121638e70fbc77ac1c681f
+m
+=src/org/iesalandalus/pooa/pruebasherencia/prueba1/Alumno.java,6\5\6578166dfb15ff66886b48d87b79af07a5dd7bfe
+k
+;src/org/iesalandalus/pooa/pruebasherencia/prueba1/Main.java,b\e\beab482867064100830386fec7b3b9167235cfa2
+n
+>src/org/iesalandalus/pooa/pruebasherencia/prueba1/Persona.java,6\6\66f2432a1ccafc0b6f65e0dfa4136f47fdfd2088
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
